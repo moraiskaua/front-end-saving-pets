@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
+        'bottom-navbar':'url("/images/wallpaper.jpg")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -17,6 +18,12 @@ const config: Config = {
         'bg-green': '#4BAD20',
         'bg-yellow': '#FFDE59',
       },
+      boxShadow: {
+        'shadow-button': 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
+      },
+      fontFamily:{
+        'font-titles': ['Merriweather Sans', '-apple-system']
+      }
     },
   },
   plugins: [],

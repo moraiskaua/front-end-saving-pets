@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import MediaSocial from './MediaSocial';
+import Button from './Button';
 // import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className="bg-red shadow-2xl flex-wrap">
-      <section className='flex justify-around items-center  border-b border-b-gray-200 p-4'>
+      <section className="flex justify-around items-center   border-b border-b-gray-200 p-4">
         <div className="mb-3">
           <Image
             src="/logo-footer.svg"
@@ -32,9 +33,14 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <MediaSocial />
+        <div className='flex justify-center items-center gap-12'>
+          <Button text="Fale Conosco" />
+          <MediaSocial />
+        </div>
       </section>
-      <p className='text-center p-2 opacity-50'>&copy;Copyright 2023 - Saving Pets</p>
+      <p className="text-center p-2 opacity-50">
+        &copy;Copyright 2023 - Todos os Direitos Reservados a Saving Pets
+      </p>
     </footer>
   );
 };
