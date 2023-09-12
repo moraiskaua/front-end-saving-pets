@@ -1,27 +1,40 @@
 import Image from 'next/image';
+import MediaSocial from './MediaSocial';
 // import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-red py-10 shadow-xl flex justify-evenly flex-wrap">
-      <div className="mb-3 ">
-        <Image
-          src="/logo-footer.svg"
-          alt="Logo Saving Pets"
-          width={120}
-          height={84}
-        />
-      </div>
-      <div className="flex justify-center items-center flex-wrap gap-10 border-b border-b-gray-200 no-underline">
-        <ul className=" flex flex-col column gap-3">
-          <li>Nossa História</li>
-          <li>Contato</li>
-        </ul>
-        <ul className=" flex flex-col column gap-3">
-          <li>Política de Privacidade</li>
-          <li>Depoimentos</li>
-        </ul>
-      </div>
+    <footer className="bg-red shadow-2xl flex-wrap">
+      <section className='flex justify-around items-center  border-b border-b-gray-200 p-4'>
+        <div className="mb-3">
+          <Image
+            src="/logo-footer.svg"
+            alt="Logo Saving Pets"
+            width={120}
+            height={84}
+          />
+        </div>
+        <div className="flex justify-center items-center flex-wrap gap-10">
+          <ul className=" flex flex-col column gap-3">
+            <li className="cursor-pointer opacity-50 transition-all hover:text-black hover:opacity-100">
+              Nossa História
+            </li>
+            <li className="cursor-pointer opacity-50 hover:text-black hover:opacity-100">
+              Contato
+            </li>
+          </ul>
+          <ul className=" flex flex-col column gap-3">
+            <li className="cursor-pointer opacity-50 transition-all hover:text-black hover:opacity-100">
+              Política de Privacidade
+            </li>
+            <li className="cursor-pointer opacity-50 transition-all hover:text-black hover:opacity-100">
+              Depoimentos
+            </li>
+          </ul>
+        </div>
+        <MediaSocial />
+      </section>
+      <p className='text-center p-2 opacity-50'>&copy;Copyright 2023 - Saving Pets</p>
     </footer>
   );
 };
