@@ -66,6 +66,17 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
                 : 'text-gray-300 hover:text-white'
             }`}
           >
+            Denunciar
+          </li>
+        </Link>
+        <Link href="/">
+          <li
+            className={`${
+              isScrolled
+                ? 'text-black hover:text-bg-green'
+                : 'text-gray-300 hover:text-white'
+            }`}
+          >
             Cadastro
           </li>
         </Link>

@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'banner':'url("/images/banner.png")',
+        banner: 'url("/images/banner.png")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -22,9 +22,9 @@ const config: Config = {
       boxShadow: {
         'shadow-button': 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
       },
-      fontFamily:{
-        'font-merri-sans': ['Merriweather Sans', '-apple-system']
-      }
+      fontFamily: {
+        'font-merri-sans': ['Merriweather Sans', '-apple-system'],
+      },
     },
   },
   plugins: [],

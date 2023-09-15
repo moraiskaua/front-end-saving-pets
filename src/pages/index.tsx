@@ -54,10 +54,55 @@ const Home = () => {
           <Button text="Saiba Mais" />
         </div>
       </section>
-      <section className="bg-white p-20 text-center flex flex-col justify-center items-center">
+      <section className="bg-white p-20 text-center flex flex-col justify-center items-center h-80">
         <h2 className="font-medium text-3xl font-merri-sans text-[#343A40] mb-8">
           Como Denunciar
         </h2>
+        <div className=" flex justify-between items-center gap-8 w-full">
+          <div className="text-center flex flex-col justify-center items-center gap-2 ">
+            <Image
+              className="animate-bounce"
+              src="/images/icons/number_1.svg"
+              alt="Nº 1"
+              width={45}
+              height={45}
+            />
+            <p className="font-medium">Acesse a página Denúncias</p>
+          </div>
+          <div className="text-center flex flex-col justify-center items-center gap-2 ">
+            <Image
+              className="animate-bounce"
+              src="/images/icons/number_2.svg"
+              alt="Nº 2"
+              width={45}
+              height={45}
+            />
+            <p className="font-medium">Preencha os espaços com o que se pede</p>
+          </div>
+          <div className="text-center flex flex-col justify-center items-center gap-2 ">
+            <Image
+              className="animate-bounce"
+              src="/images/icons/number_3.svg"
+              alt="Nº 3"
+              width={45}
+              height={45}
+            />
+            <p className="font-medium">
+              {' '}
+              Clique no botão enviar para registrar sua denúncia
+            </p>
+          </div>
+          <div className="text-center flex flex-col justify-center items-center gap-2 ">
+            <Image
+              className="animate-bounce"
+              src="/images/icons/number_4.svg"
+              alt="Nº 4"
+              width={45}
+              height={45}
+            />
+            <p className="font-medium">Aguarde a equipe entrar em contato!</p>
+          </div>
+        </div>
       </section>
       <Footer />
     </>
