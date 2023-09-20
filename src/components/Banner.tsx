@@ -11,7 +11,7 @@ const Banner = ({ title, text }: BannerProps) => {
         bg-cover bg-center bg-banner backdrop-contrast-50 bg-white/30"
         id="banner"
       >
-        <h1 className="mb-5 font-medium font-merri-sans text-5xl text-white border-b-4 border-[#FFDE59] pb-4">
+        <h1 className="mb-5 font-medium font-merri-sans text-5xl text-white border-b-4 border-[#FEAE11] pb-4">
           {title}
         </h1>
         <p className="font-merri-sans font-normal text-white text-center w-1/3">

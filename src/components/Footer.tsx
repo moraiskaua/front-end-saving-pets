@@ -18,12 +18,16 @@ const Footer = () => {
         </div>
         <div className="flex justify-center items-center flex-wrap gap-10">
           <ul className=" flex flex-col column gap-3">
-            <li className="cursor-pointer opacity-50 transition-all hover:text-black hover:opacity-100">
-              Nossa História
-            </li>
-            <li className="cursor-pointer opacity-50 hover:text-black hover:opacity-100">
-              Contato
-            </li>
+            <Link href="/about">
+              <li className="cursor-pointer opacity-50 transition-all hover:text-black hover:opacity-100">
+                Nossa História
+              </li>
+            </Link>
+            <Link href="/contact">
+              <li className="cursor-pointer opacity-50 hover:text-black hover:opacity-100">
+                Contato
+              </li>
+            </Link>
           </ul>
           <ul className=" flex flex-col column gap-3">
             <li className="cursor-pointer opacity-50 transition-all hover:text-black hover:opacity-100">
@@ -35,7 +39,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex justify-center items-center gap-12">
-          <Link href='/contact'>
+          <Link href="/contact">
             <Button text="Fale Conosco" />
           </Link>
           <MediaSocial />

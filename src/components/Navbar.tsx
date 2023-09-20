@@ -27,7 +27,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Home
           </li>
         </Link>
-        <Link href="/">
+        <Link href="/about">
           <li
             className={`${
               isScrolled
@@ -49,7 +49,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Contato
           </li>
         </Link>
-        <Link href="/">
+        <Link href="/gallery">
           <li
             className={`${
               isScrolled
@@ -60,7 +60,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Galeria
           </li>
         </Link>
-        <Link href="/">
+        <Link href="/report">
           <li
             className={`${
               isScrolled
@@ -71,7 +71,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Denunciar
           </li>
         </Link>
-        <Link href="/">
+        <Link href="/register">
           <li
             className={`${
               isScrolled

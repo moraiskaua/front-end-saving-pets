@@ -1,10 +1,6 @@
-import { useEffect, useState } from 'react';
-
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Button from '@/components/Button';
-
 import Image from 'next/image';
+
+import Button from '@/components/Button';
 import Banner from '@/components/Banner';
 
 const Home = () => {
@@ -21,7 +17,7 @@ const Home = () => {
         id="about-us"
       >
         <div className="w-1/2">
-          <h2 className="font-medium text-3xl font-merri-sans text-[#343A40] mb-8">
+          <h2 className="font-medium text-3xl font-merri-sans text-white mb-8">
             Sobre Nós
           </h2>
           <p className="mb-8 text-justify">
@@ -37,7 +33,7 @@ const Home = () => {
             facilitando o resgate e até a rapidez do atendimento em caso de
             urgência.
           </p>
-          <h2 className="text-[#343A40] text-2xl font-medium mb-8">
+          <h2 className="text-white text-2xl font-medium mb-8">
             Não deixe pra amanhã o pet que você pode salvar hoje!
           </h2>
           <Button text="Saiba Mais" />
@@ -51,7 +47,7 @@ const Home = () => {
           <div className="text-center flex flex-col justify-center items-center gap-2 ">
             <Image
               className="animate-bounce"
-              src="/images/icons/number_1.svg"
+              src="/images/icons/1.svg"
               alt="Nº 1"
               width={45}
               height={45}
@@ -61,7 +57,7 @@ const Home = () => {
           <div className="text-center flex flex-col justify-center items-center gap-2 ">
             <Image
               className="animate-bounce"
-              src="/images/icons/number_2.svg"
+              src="/images/icons/2.svg"
               alt="Nº 2"
               width={45}
               height={45}
@@ -71,7 +67,7 @@ const Home = () => {
           <div className="text-center flex flex-col justify-center items-center gap-2 ">
             <Image
               className="animate-bounce"
-              src="/images/icons/number_3.svg"
+              src="/images/icons/3.svg"
               alt="Nº 3"
               width={45}
               height={45}
@@ -84,7 +80,7 @@ const Home = () => {
           <div className="text-center flex flex-col justify-center items-center gap-2 ">
             <Image
               className="animate-bounce"
-              src="/images/icons/number_4.svg"
+              src="/images/icons/4.svg"
               alt="Nº 4"
               width={45}
               height={45}
@@ -93,7 +89,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
