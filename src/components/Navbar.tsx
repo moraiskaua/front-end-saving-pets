@@ -12,7 +12,9 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
         isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
       } flex justify-around p-3 fixed w-full z-10 transition-colors ease-out`}
     >
-      <Image src="/logo.svg" alt="Logo Saving Pets" width={120} height={84} />
+      <Link href='/' >
+        <Image src="/logo.svg" alt="Logo Saving Pets" width={120} height={84} />
+      </Link>
       <ul className="flex items-center gap-4 font-bold text-sm">
         <Link href="/">
           <li
@@ -36,7 +38,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Sobre Nós
           </li>
         </Link>
-        <Link href="/">
+        <Link href="/contact">
           <li
             className={`${
               isScrolled

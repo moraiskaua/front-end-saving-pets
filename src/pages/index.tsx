@@ -8,20 +8,9 @@ import Image from 'next/image';
 import Banner from '@/components/Banner';
 
 const Home = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () =>
-      window.scrollY > 0 ? setIsScrolled(true) : setIsScrolled(false);
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <>
-      <Navbar isScrolled={isScrolled} />
       <Banner
         text='"Ter um animal em sua vida não faz de você uma pessoa melhor, mas
         sim cuidar dele e respeitá-lo como merece"'

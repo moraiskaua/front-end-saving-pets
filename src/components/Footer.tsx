@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import MediaSocial from './MediaSocial';
 import Button from './Button';
+import Link from 'next/link';
 // import Link from 'next/link';
 
 const Footer = () => {
@@ -33,8 +34,10 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className='flex justify-center items-center gap-12'>
-          <Button text="Fale Conosco" />
+        <div className="flex justify-center items-center gap-12">
+          <Link href='/contact'>
+            <Button text="Fale Conosco" />
+          </Link>
           <MediaSocial />
         </div>
       </section>
