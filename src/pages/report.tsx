@@ -17,7 +17,7 @@ const Report = () => {
           <FormInput placeholder="Informe seu telefone " required />
           <FormInput placeholder="Informe seu CPF " required />
           <FormTextBox placeholder="Descreva o pet" required />
-          <FormButton text='Enviar'/>
+          <FormButton text="Enviar" />
         </form>
       </section>
     </>
