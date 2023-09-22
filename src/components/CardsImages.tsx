@@ -1,15 +1,19 @@
 import Image from 'next/image';
 
-const CardImages = () => {
+interface propsCardsImages{
+    image: string;
+}
+
+const CardImages = ({image}: propsCardsImages) => {
   return (
     <>
-      <div className="flex flex-col bg-gray-100 rounded-lg shadow-md transition-all hover:scale-110 w-80 h-72">
+      <div className="flex flex-col rounded-lg shadow-lg transition-all hover:scale-110 w-96 h-60">
         <Image
           className="rounded-lg"
-          src="/images/gallery/bulldog.jpg"
-          alt="Logo Saving Pets"
-          width={320}
-          height={270}
+          src={image}
+          alt="fotos Galeria"
+          width={384}
+          height={240}
         />
       </div>
     </>
