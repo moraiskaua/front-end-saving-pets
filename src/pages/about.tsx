@@ -4,7 +4,8 @@ const About = () => {
   return (
     <>
       <Banner text="Conheça um pouco da nossa história!" title="Sobre Nós" />
-      <section className="min-h-screen"></section>
+      <section className="min-h-screen">
+      </section>
     </>
   );
 };
