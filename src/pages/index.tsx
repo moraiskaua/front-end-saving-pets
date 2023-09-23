@@ -4,7 +4,6 @@ import Button from '@/components/Button';
 import Banner from '@/components/Banner';
 
 const Home = () => {
-
   return (
     <>
       <Banner
