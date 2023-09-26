@@ -10,8 +10,8 @@ const Report = () => {
         text="Nunca deixe para amanhã o Pet que você pode salvar hoje!"
         title="Denuncie"
       />
-      <section className="lg:min-h-screen bg-[#FEAE11] bg-report-forms flex justify-center items-center">
-        <form className="bg-white shadow-lg pt-12 pb-12 pr-8 pl-8 rounded-md flex flex-col gap-4 w-5/12">
+      <section className="min-h-screen bg-[#FEAE11] bg-report-forms flex justify-center items-center bg-bottom bg-no-repeat shadow-xl">
+        <form className="bg-white shadow-lg py-12 px-8 rounded-md flex flex-col gap-4 w-5/12">
           <h1 className="text-2xl mb-8 text-center">Formulário de Denúncia</h1>
           <FormInput placeholder="Informe seu nome" required />
           <FormInput placeholder="Informe seu telefone " required />
