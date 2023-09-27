@@ -58,29 +58,39 @@ const About = () => {
           </h1>
           <div className="flex flex-wrap justify-around gap-2">
             <CardProfile
-              foto="/images/foto_davi.jpg"
-              nome="Davi Salomão"
-              funcao="UX-UI"
+              photo="/images/foto_davi.jpg"
+              name="Davi Salomão"
+              role="UX - UI"
+              github=""
+              email="mailto:davi.salomao@sempreceub.com"
             />
             <CardProfile
-              foto="/images/foto_Douglas.jpg"
-              nome="Douglas Santos"
-              funcao="Front-End Developer"
+              photo="/images/foto_douglas.jpg"
+              name="Douglas Santos"
+              role="Front-End Developer"
+              github="https://github.com/D0uglasSantos"
+              email="mailto:douglas.santos@sempreceub.com"
             />
             <CardProfile
-              foto=""
-              nome="Kauã Morais"
-              funcao="Back-End Developer"
+              photo="/images/foto_kaua.jpg"
+              name="Kauã Morais"
+              role="Back-End Developer"
+              github="https://github.com/moraiskaua"
+              email="mailto:moraiskaua@sempreceub.com"
             />
             <CardProfile
-              foto="/images/foto_guilherme.jpg"
-              nome="Guilherme Marques"
-              funcao="Data Base Manager"
+              photo="/images/foto_guilherme.jpg"
+              name="Guilherme Marques"
+              role="Data Base Manager"
+              github=""
+              email="mailto:guilherme.marques@sempreceub.com"
             />
             <CardProfile
-              foto=""
-              nome="Larissa Alves"
-              funcao="Data Base Manager"
+              photo="/images/foto_larissa.jpg"
+              name="Larissa Alves"
+              role="Data Base Manager"
+              github="https://github.com/larissanevss03"
+              email="mailto:larissa.gneves@sempreceub.com"
             />
           </div>
         </div>
