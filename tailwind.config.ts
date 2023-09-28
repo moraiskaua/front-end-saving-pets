@@ -11,7 +11,8 @@ const config: Config = {
       backgroundImage: {
         'banner': 'url("/images/banner.png")',
         'contact-forms':'url("/images/wallpaper-contact-forms.jpg")', 
-        'report-forms':'url("/images/wallpaper-report-forms.png")', 
+        'report-forms':'url("/images/wallpaper-report-forms.png")',
+        'register-forms':'url("/images/wallpaper-register-forms.png")', 
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
