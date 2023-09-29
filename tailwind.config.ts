@@ -9,16 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-<<<<<<< HEAD
-        wallpaper: 'url("/images/wallpaper.jpg")',
-        'contact-forms': 'url("/images/wallpaper-contact-forms.jpg")',
-        'report-forms': 'url("/images/wallpaper-report-forms.png")',
-=======
+        'wallpaper': 'url("/images/wallpaper.jpg")',
         'banner': 'url("/images/banner.png")',
         'contact-forms':'url("/images/wallpaper-contact-forms.jpg")', 
         'report-forms':'url("/images/wallpaper-report-forms.png")',
         'register-forms':'url("/images/wallpaper-register-forms.png")', 
->>>>>>> 9d98e5910363ebf16d1df789ade1d6a670ce0ecd
+
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

@@ -60,7 +60,7 @@ const About = () => {
             <CardProfile
               photo="/images/foto_davi.jpg"
               name="Davi Salomão"
-              role="UX - UI"
+              role="UI-UX"
               github=""
               email="mailto:davi.salomao@sempreceub.com"
             />

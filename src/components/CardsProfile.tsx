@@ -14,9 +14,9 @@ interface PhotoCardProps {
 const CardProfile = ({ photo, name, role, github, email }: PhotoCardProps) => {
   return (
     <div className="flex flex-col rounded-md w-60 h-72 bg-white shadow-lg">
-      <div className="bg-bg-green rounded-t-md flex justify-center items-center mb-16">
+      <div className="bg-[#1C130F] rounded-t-md flex justify-center items-center mb-16">
         <Image
-          className="rounded-full object-cover bg-bg-green p-1 -mb-12 h-32"
+          className="rounded-full object-cover bg-[#1C130F] p-1 -mb-12 h-32"
           src={photo}
           alt={name}
           width={120}
