@@ -1,10 +1,14 @@
 interface ButtonProps {
   text: string;
+  onClick?: () => void;
 }
 
-const Button = ({ text }: ButtonProps) => {
+const Button = ({ text, onClick }: ButtonProps) => {
   return (
-    <button className="rounded-full bg-white shadow-lg shadow-button py-4 px-8 transition-all hover:-translate-y-2 hover:shadow-[#4BAD20] hover:bg-bg-green hover:text-white font-medium">
+    <button
+      className="rounded-full border-2 border-yellow text-yellow hover:bg-yellow hover:text-black font-semibold py-3 px-7 transition-all"
+      onClick={onClick}
+    >
       {text}
     </button>
   );
