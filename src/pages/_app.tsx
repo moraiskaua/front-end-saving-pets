@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/logo.svg" />
         <title>Saving Pets</title>
       </Head>
       {!isRegisterPage && <Navbar isScrolled={isScrolled} />}
