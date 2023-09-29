@@ -5,9 +5,10 @@ const PrivacyPolicy = () => {
     <>
       <Banner
         text="Conheça nossa Política de Privacidade!"
-        title="Política de Privacidade"
+        pre_title="Política de"
+        pos_title="Privacidade"
       />
-      <section className="min-h-screen bg-bg-yellow text-slate-900 p-8 flex flex-col gap-4">
+      <section className="min-h-screen bg-wallpaper-about-us bg-cover bg-center text-white p-8 flex flex-col gap-4">
         <div>
           <h4 className="text-justify text-lg">
             Bem-vindo ao <strong>Saving Pets!</strong> Aqui na Saving Pets,
@@ -17,15 +18,17 @@ const PrivacyPolicy = () => {
             quando você utiliza nossos serviços e visitas nosso site.
           </h4>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>1. Informações que Coletamos</h3>
-          <p className='text-lg font-semibold'>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">
+            1. Informações que Coletamos
+          </h3>
+          <p className="text-lg font-semibold">
             Ao usar o site Saving Pets, podemos coletar as seguintes
             informações:
           </p>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>1.2. Informações de Uso:</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">1.2. Informações de Uso:</h3>
           <ul>
             <li>Endereço IP</li>
             <li>Tipo de dispositivo</li>
@@ -34,12 +37,16 @@ const PrivacyPolicy = () => {
             <li>Duração da visita</li>
           </ul>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>2. Uso de Informações</h3>
-          <p className='text-lg font-semibold'>Usamos suas informações pessoais para os seguintes fins:</p>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">2. Uso de Informações</h3>
+          <p className="text-lg font-semibold">
+            Usamos suas informações pessoais para os seguintes fins:
+          </p>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>2.1. Fornecer e Gerenciar Serviços:</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">
+            2.1. Fornecer e Gerenciar Serviços:
+          </h3>
           <ul>
             <li>Processar doações e transações</li>
             <li>Facilitar a adoção de animais de estimação</li>
@@ -51,8 +58,10 @@ const PrivacyPolicy = () => {
             </li>
           </ul>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>2.2. Melhorar nossos Serviços:</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">
+            2.2. Melhorar nossos Serviços:
+          </h3>
           <ul>
             <li>
               Analisar o comportamento do usuário para melhorar nosso site
@@ -64,8 +73,10 @@ const PrivacyPolicy = () => {
             </li>
           </ul>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>2.3. Marketing e Comunicação:</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">
+            2.3. Marketing e Comunicação:
+          </h3>
           <ul>
             <li>
               Enviar informações sobre campanhas de arrecadação de fundos e
@@ -78,9 +89,11 @@ const PrivacyPolicy = () => {
             <li>Obter seu consentimento explícito, quando necessário</li>
           </ul>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>3. Compartilhamento de Informações:</h3>
-          <p className='text-lg font-semibold'>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">
+            3. Compartilhamento de Informações:
+          </h3>
+          <p className="text-lg font-semibold">
             Não vendemos, alugamos ou compartilhamos suas informações pessoais
             com terceiros, exceto nas seguintes situações:
           </p>
@@ -93,8 +106,8 @@ const PrivacyPolicy = () => {
             </li>
           </ul>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>4. Proteção de Dados:</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">4. Proteção de Dados:</h3>
           <p>
             Implementamos medidas de segurança adequadas para proteger suas
             informações pessoais contra perda, uso indevido e acesso não
@@ -102,9 +115,11 @@ const PrivacyPolicy = () => {
             dados pela Internet é 100% segura.
           </p>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>5. Seus Direitos de Privacidade:</h3>
-          <p className='text-lg font-semibold'>Você tem o direito de:</p>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">
+            5. Seus Direitos de Privacidade:
+          </h3>
+          <p className="text-lg font-semibold">Você tem o direito de:</p>
           <ul>
             <li>Acessar e retificar suas informações pessoais.</li>
             <li>Excluir seus dados, sujeito a nossas obrigações legais.</li>
@@ -122,8 +137,10 @@ const PrivacyPolicy = () => {
             contato fornecidas abaixo.
           </p>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>6. Alterações na Política de Privacidade:</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">
+            6. Alterações na Política de Privacidade:
+          </h3>
           <p>
             Podemos atualizar esta Política de Privacidade periodicamente para
             refletir as mudanças em nossas práticas de informações. Recomendamos
@@ -131,8 +148,8 @@ const PrivacyPolicy = () => {
             sobre como protegemos suas informações.
           </p>
         </div>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-2xl font-semibold'>7. Contato:</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-semibold">7. Contato:</h3>
           <p>
             Se você tiver dúvidas ou preocupações sobre esta Política de
             Privacidade ou nossas práticas de informações, entre em contato
@@ -146,7 +163,7 @@ const PrivacyPolicy = () => {
             você.
           </p>
         </div>
-        <h6 className='text-sm mt-8'>
+        <h6 className="text-sm mt-8">
           Última atualização: <strong>3 de setembro de 2023</strong>
         </h6>
       </section>
