@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'banner': 'url("/images/banner.png")',
-        'contact-forms':'url("/images/wallpaper-contact-forms.jpg")', 
-        'report-forms':'url("/images/wallpaper-report-forms.png")', 
+        wallpaper: 'url("/images/wallpaper.jpg")',
+        'contact-forms': 'url("/images/wallpaper-contact-forms.jpg")',
+        'report-forms': 'url("/images/wallpaper-report-forms.png")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -26,6 +26,7 @@ const config: Config = {
       },
       fontFamily: {
         'font-merri-sans': ['Merriweather Sans', '-apple-system'],
+        'hind-siliguri': 'Hind Siliguri, sans-serif',
       },
     },
   },
