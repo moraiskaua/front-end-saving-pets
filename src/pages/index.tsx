@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import Button from '@/components/Button';
 import Banner from '@/components/Banner';
 import { useRouter } from 'next/router';

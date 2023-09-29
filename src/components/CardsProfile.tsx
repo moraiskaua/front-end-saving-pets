@@ -13,10 +13,10 @@ interface PhotoCardProps {
 
 const CardProfile = ({ photo, name, role, github, email }: PhotoCardProps) => {
   return (
-    <div className="flex flex-col rounded-md w-60 h-72 bg-white shadow-lg">
-      <div className="bg-[#1C130F] rounded-t-md flex justify-center items-center mb-16">
+    <div className="flex flex-col rounded-md w-60 h-72 bg-brown shadow-lg">
+      <div className="bg-yellow pt-2 rounded-t-md flex justify-center items-center mb-16">
         <Image
-          className="rounded-full object-cover bg-[#1C130F] p-1 -mb-12 h-32"
+          className="rounded-full object-cover bg-yellow p-1 -mb-12 h-32"
           src={photo}
           alt={name}
           width={120}
@@ -24,19 +24,13 @@ const CardProfile = ({ photo, name, role, github, email }: PhotoCardProps) => {
         />
       </div>
       <h2 className="text-center text-xl font-medium">{name}</h2>
-      <h4 className="text-center text-lg font-thin mb-8">{role}</h4>
+      <h4 className="text-center text-lg font-thin mb-8 text-yellow">{role}</h4>
       <div className="flex justify-center gap-1">
         <Link href={github} target="_blank">
-          <GitHubIcon
-            className=" text-black border-2 border-black p-1 w-9 h-9 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md
-          hover:shadow-black hover:bg-[#212121] hover:text-white hover:border-transparent"
-          />
+          <GitHubIcon className=" text-white/75 border-2 border-white/75 p-1 w-9 h-9 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md" />
         </Link>
         <Link href={email} target="_blank">
-          <EmailIcon
-            className=" text-black border-2 border-black p-1 w-9 h-9 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md
-          hover:shadow-[#9a1919] hover:bg-[#9a1919] hover:text-white hover:border-transparent"
-          />
+          <EmailIcon className=" text-white/75 border-2 border-white/75 p-1 w-9 h-9 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md" />
         </Link>
       </div>
     </div>

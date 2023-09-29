@@ -15,7 +15,7 @@ const Banner = ({ pre_title, pos_title, text }: BannerProps) => {
         <p className="">{pre_title}</p>
         <h1 className="p-1 bg-brown text-yellow">{pos_title}</h1>
       </div>
-      <p className="font-hind-siliguri font-light text-white text-center w-1/3">
+      <p className="font-hind-siliguri font-light text-lg text-white text-center w-1/3">
         {text}
       </p>
     </section>
