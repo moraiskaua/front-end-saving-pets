@@ -13,7 +13,7 @@ const config: Config = {
         footprints: 'url("/images/footprints.png")',
         'wallpaper-about-us': 'url("/images/wallpaper-about-us.jpg")',
         'walllpaper-how-report': 'url("/images/wallpaper-how-report.jpg")',
-        'contact-forms': 'url("/images/wallpaper-contact-forms.jpg")',
+        'contact-forms': 'url("/images/wallpaper-contact-forms.png")',
         'report-forms': 'url("/images/wallpaper-report-forms.png")',
       },
       colors: {
