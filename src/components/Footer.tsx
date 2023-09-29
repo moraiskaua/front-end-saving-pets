@@ -29,16 +29,19 @@ const Footer = () => {
               </li>
             </Link>
           </ul>
-          <Link href='/privacyPolicy' >
-            <ul className=" flex flex-col column gap-3">
+
+          <ul className=" flex flex-col column gap-3">
+            <Link href="/privacyPolicy">
               <li className="cursor-pointer opacity-50 transition-all hover:text-black hover:opacity-100">
                 Política de Privacidade
               </li>
+            </Link>
+            <Link href="/depositions" >
               <li className="cursor-pointer opacity-50 transition-all hover:text-black hover:opacity-100">
                 Depoimentos
               </li>
-            </ul>
-          </Link>
+            </Link>
+          </ul>
         </div>
         <div className="flex justify-center items-center gap-12">
           <Link href="/contact">
