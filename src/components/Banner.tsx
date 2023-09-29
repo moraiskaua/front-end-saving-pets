@@ -9,7 +9,7 @@ const Banner = ({ pre_title, pos_title, text, isSingleWord }: BannerProps) => {
   return (
     <section
       className="min-h-screen w-full flex flex-col justify-center items-center gap-12
-        bg-cover bg-center bg-wallpaper"
+        bg-contain bg-center bg-no-repeat bg-wallpaper bg-[#9D8B81]"
       id="banner"
     >
       <div
