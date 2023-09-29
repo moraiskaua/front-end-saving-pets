@@ -4,10 +4,56 @@ import CardProfile from '@/components/CardsProfile';
 const About = () => {
   return (
     <>
-      <Banner text="Conheça um pouco da nossa história!" title="Sobre Nós" />
-      <section className="min-h-screen">
-        <div className="flex flex-col gap-4 p-8">
-          <h1 className="text center text-lg font-medium mb-4">
+      <Banner
+        text="Conheça um pouco da nossa história!"
+        pre_title="Sobre"
+        pos_title="Nós"
+      />
+      <section className="min-h-screen bg-wallpaper-about-us bg-cover bg-center text-center flex flex-col justify-center items-center text-white font-hind-siliguri">
+        <div className="bg-bg-yellow min-h-screen p-8 flex flex-col gap-8 items-center justify-center">
+          <h1 className="text-center text-3xl text-white font-semibold mb-12 border-b-4 border-white py-2">
+            Colaboradores
+          </h1>
+          <div className="flex flex-wrap justify-around gap-2">
+            <CardProfile
+              photo="/images/foto_davi.jpg"
+              name="Davi Salomão"
+              role="UI-UX"
+              github=""
+              email="mailto:davi.salomao@sempreceub.com"
+            />
+            <CardProfile
+              photo="/images/foto_douglas.jpg"
+              name="Douglas Santos"
+              role="Full-Stack Developer"
+              github="https://github.com/D0uglasSantos"
+              email="mailto:douglas.santos@sempreceub.com"
+            />
+            <CardProfile
+              photo="/images/foto_kaua.jpg"
+              name="Kauã Morais"
+              role="Full-Stack Developer"
+              github="https://github.com/moraiskaua"
+              email="mailto:moraiskaua@sempreceub.com"
+            />
+            <CardProfile
+              photo="/images/foto_guilherme.jpg"
+              name="Guilherme Marques"
+              role="Data Base Manager"
+              github=""
+              email="mailto:guilherme.marques@sempreceub.com"
+            />
+            <CardProfile
+              photo="/images/foto_larissa.jpg"
+              name="Larissa Alves"
+              role="Data Base Manager"
+              github="https://github.com/larissanevss03"
+              email="mailto:larissa.gneves@sempreceub.com"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-4 p-8 w-1/2">
+          <h1 className="font-medium text-3xl my-7">
             Bem vindo aos Saving Pets
           </h1>
           <p>
@@ -51,48 +97,6 @@ const About = () => {
             Com amor pelos animais,
             <br />A equipe do Saving Pets
           </h3>
-        </div>
-        <div className="bg-bg-yellow min-h-screen p-8 flex flex-col gap-8 items-center justify-center">
-          <h1 className="text-center text-3xl text-white font-semibold mb-12 border-b-4 border-white py-2">
-            Colaboradores
-          </h1>
-          <div className="flex flex-wrap justify-around gap-2">
-            <CardProfile
-              photo="/images/foto_davi.jpg"
-              name="Davi Salomão"
-              role="UI-UX"
-              github=""
-              email="mailto:davi.salomao@sempreceub.com"
-            />
-            <CardProfile
-              photo="/images/foto_douglas.jpg"
-              name="Douglas Santos"
-              role="Front-End Developer"
-              github="https://github.com/D0uglasSantos"
-              email="mailto:douglas.santos@sempreceub.com"
-            />
-            <CardProfile
-              photo="/images/foto_kaua.jpg"
-              name="Kauã Morais"
-              role="Back-End Developer"
-              github="https://github.com/moraiskaua"
-              email="mailto:moraiskaua@sempreceub.com"
-            />
-            <CardProfile
-              photo="/images/foto_guilherme.jpg"
-              name="Guilherme Marques"
-              role="Data Base Manager"
-              github=""
-              email="mailto:guilherme.marques@sempreceub.com"
-            />
-            <CardProfile
-              photo="/images/foto_larissa.jpg"
-              name="Larissa Alves"
-              role="Data Base Manager"
-              github="https://github.com/larissanevss03"
-              email="mailto:larissa.gneves@sempreceub.com"
-            />
-          </div>
         </div>
       </section>
     </>

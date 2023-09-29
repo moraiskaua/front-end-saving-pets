@@ -9,22 +9,13 @@ const MediaSocial = () => {
         Siga-nos
       </h2>
       <div className="flex justify-center gap-4">
-        <div
-          className="bg-[#07254d] text-white p-4 w-11 h-11 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md
-        hover:shadow-[#127aea95]"
-        >
+        <div className="text-white/75 p-4 w-12 h-12 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer">
           <FacebookIcon />
         </div>
-        <div
-          className="bg-[#cc1251] text-white p-4 w-11 h-11 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md
-        hover:shadow-[#cc1251]"
-        >
+        <div className="text-white/75 p-4 w-12 h-12 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer">
           <InstagramIcon />
         </div>
-        <div
-          className="bg-[#25d360] text-white p-4 w-11 h-11 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md
-        hover:shadow-[#07db6a95]"
-        >
+        <div className="text-white/75 p-4 w-12 h-12 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer">
           <WhatsAppIcon />
         </div>
       </div>

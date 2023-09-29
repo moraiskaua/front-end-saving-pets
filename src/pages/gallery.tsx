@@ -6,9 +6,11 @@ const Gallery = () => {
     <>
       <Banner
         text="Veja um pouco da nossa histórias e momentos na nossa galeria"
-        title="Galeria"
+        pre_title="Gal"
+        pos_title="eria"
+        isSingleWord
       />
-      <section className="min-h-screen flex flex-wrap gap-8 justify-center pt-10 p-11 bg-bg-yellow">
+      <section className="min-h-screen flex flex-wrap gap-8 justify-center pt-10 p-11 bg-wallpaper-about-us bg-cover bg-center">
         <CardImages image="/images/gallery/bulldog.jpg" />
         <CardImages image="/images/gallery/cao-e-mao.jpg" />
         <CardImages image="/images/gallery/cao-e-dono.jpg" />
