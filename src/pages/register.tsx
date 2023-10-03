@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Register = () => {
   return (
     <>
-      <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-register-forms bg-bg-yellow">
+      <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-report-forms bg-bg-yellow">
         <form
           action=""
           className="bg-white shadow-lg py-12 px-8 rounded-md flex flex-col gap-4 w-4/12 justify-center"
@@ -23,7 +23,7 @@ const Register = () => {
               <Link
                 href="/privacyPolicy"
                 target="_blank"
-                className="cursor-pointer transition-all hover:text-bg-yellow"
+                className="cursor-pointer transition-all hover:text-yellow"
               >
                 <strong> Política de Privacidade</strong>
               </Link>
