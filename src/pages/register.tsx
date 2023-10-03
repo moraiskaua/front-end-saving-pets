@@ -1,14 +1,25 @@
 import FormButton from '@/components/FormButton';
 import FormInput from '@/components/FormInput';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { IoArrowBackSharp } from 'react-icons/io5';
 
 const Register = () => {
+  const router = useRouter();
+
   return (
     <>
-      <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-report-forms bg-bg-yellow">
+      <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-report-forms bg-yellow">
+        <button
+          onClick={() => router.back()}
+          className="text-black text-xl py-1 px-2 bg-white rounded-md shadow-lg flex gap-1 items-center hover:-translate-y-1 transition-all absolute left-5 top-5"
+        >
+          <IoArrowBackSharp />
+          <p>Voltar</p>
+        </button>
         <form
           action=""
-          className="bg-white shadow-lg py-12 px-8 rounded-md flex flex-col gap-4 w-4/12 justify-center"
+          className="bg-white shadow-lg py-12 px-8 rounded-md flex flex-col gap-4 lg:w-4/12 md:w-2/3 sm:w-1/2 justify-center"
         >
           <h1 className="text-2xl mb-8 text-center">Cadastro</h1>
           <FormInput placeholder="Informe o seu Nome Completo" required />
