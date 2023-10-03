@@ -20,7 +20,8 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   // Verifique se o caminho atual é "/register"
-  const isRegisterPage = router.pathname === '/register';
+  const isRegisterPage =
+    router.pathname === '/register' || router.pathname === '/login';
 
   return (
     <>
