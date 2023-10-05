@@ -1,6 +1,8 @@
 import Banner from '@/components/Banner';
 import CardsDepositions from '@/components/CardsDepositions';
 import depositions from '../components/json/depositions.json';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 
 const Depositions = () => {
   return (
@@ -8,17 +10,30 @@ const Depositions = () => {
       <Banner
         pre_title="Depoi"
         pos_title="mentos"
-        isSingleWord
         text="Confira os depoimentos de pessoas que recorreram a nós!"
       />
       <section className="min-h-screen py-8 px-12 bg-brown flex items-center">
-        <div className="p-8 flex flex-wrap gap-4 justify-center">
-          {depositions.map((deposition) => (
-            <CardsDepositions key={deposition.id} deposition={deposition} />
+        <Swiper
+          spaceBetween={2}
+          slidesPerView={2}
+          pagination={{ clickable: true }}
+          loop={true}
+          navigation
+          className='bg-footprints'
+          
+        >
+          {depositions.map(deposition => (
+            <SwiperSlide
+              className="flex items-center justify-center p-20"
+              key={deposition.id}
+            >
+              <CardsDepositions deposition={deposition} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </section>
     </>
   );
 };
+
 export default Depositions;

@@ -11,7 +11,7 @@ interface CardProps {
 
 const CardsDepositions = ({ deposition }: CardProps) => {
   return (
-    <section className="flex flex-col items-center  rounded-3xl w-2/6 bg-white shadow-xl mb-12">
+    <section className="flex flex-col items-center  rounded-3xl bg-white shadow-xl">
       <Image
         className="rounded-full border-8 border-yellow -mt-12 mb-2 shadow-lg"
         src={deposition.photo}
