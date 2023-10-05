@@ -19,7 +19,6 @@ export default function App({ Component, pageProps }: AppProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Verifique se o caminho atual é "/register"
   const isRegisterPage =
     router.pathname === '/register' || router.pathname === '/login';
 

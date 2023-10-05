@@ -1,0 +1,38 @@
+[
+    {
+        "id":"1",
+        "name":"João Paulo",
+        "photo":"/images/photoJoao.png",
+        "deposition":"Minha família e eu adotamos nosso cãozinho, Max, da Saving Pets. Ele era um cachorro de rua assustado quando o encontramos, mas a ONG o acolheu e o treinou para se tornar um membro amoroso e leal da nossa família. Estamos eternamente gratos por ter encontrado Max através da Saving Pets. Eles não apenas salvam vidas, mas também unem corações."
+    },
+    {
+        "id":"2",
+        "name":"Ana Júlia",
+        "photo":"/images/photoAna.png",
+        "deposition":"Como voluntária da Saving Pets, tive a oportunidade de ver em primeira mão o impacto positivo que essa ONG tem na comunidade e na vida dos animais. A dedicação e paixão da equipe são inspiradoras. Estamos todos unidos por um objetivo comum: salvar e cuidar dos animais que mais precisam. É gratificante saber que estamos fazendo a diferença."
+    },
+    {
+        "id":"3",
+        "name":"Carlos Santos",
+        "photo":"/images/photoCarlos.png",
+        "deposition":"Como doador regular da Saving Pets, estou constantemente impressionado com a transparência e a eficiência com que eles usam os recursos. Cada centavo é direcionado para cuidar dos animais e promover sua adoção responsável. Esta organização merece todo o apoio possível para continuar fazendo o bem que faz."
+    },
+    {
+        "id":"4",
+        "name":"Laura Lima",
+        "photo":"/images/photoLaura.png",
+        "deposition":"Participar das campanhas de conscientização da Saving Pets tem sido uma experiência enriquecedora. Ensinar as pessoas sobre a importância da esterilização, adoção responsável e cuidado com os animais é fundamental para criar uma comunidade mais compassiva. A Saving Pets lidera esse esforço de maneira exemplar."
+    },
+    {
+        "id":"5",
+        "name":"Joana Silva",
+        "photo":"/images/photoJoana.png",
+        "deposition":"A 'Saving Pets' é um exemplo brilhante de como a dedicação e a compaixão podem criar um impacto positivo duradouro nas vidas dos animais e das pessoas. Se você está procurando uma causa digna para apoiar ou deseja se envolver como voluntário, esta ONG é o lugar perfeito para começar. Unidos, podemos fazer mais pelos nossos amigos de quatro patas e tornar o mundo um lugar melhor para todos."
+    },
+    {
+        "id":"6",
+        "name":"Pedro Alves",
+        "photo":"/images/photoPedro.png",
+        "deposition":"Como adotante de um cão da Saving Pets, posso dizer com confiança que eles são incríveis em encontrar o ajuste perfeito entre um animal e uma família. Nosso adorável labrador, Max, trouxe uma alegria indescritível à nossa casa. A Saving Pets não apenas resgata animais, mas também os emparelha com pessoas que os amam incondicionalmente."
+    }
+]

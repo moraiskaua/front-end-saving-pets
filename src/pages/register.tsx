@@ -12,10 +12,9 @@ const Register = () => {
       <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-report-forms bg-yellow">
         <button
           onClick={() => router.back()}
-          className="text-black text-xl py-1 px-2 bg-white rounded-md shadow-lg flex gap-1 items-center hover:-translate-y-1 transition-all absolute left-5 top-5"
+          className="text-white text-xl py-1 px-2 bg-transparent border-2 border-white rounded-md shadow-lg flex items-center hover:text-black hover:bg-white transition-all absolute left-5 top-5"
         >
           <IoArrowBackSharp />
-          <p>Voltar</p>
         </button>
         <form
           action=""
