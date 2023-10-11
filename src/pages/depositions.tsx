@@ -1,13 +1,14 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 import Banner from '@/components/Banner';
 import CardsDepositions from '@/components/CardsDepositions';
 import depositions from '../components/json/depositions.json';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
 
 const Depositions = () => {
   return (
     <>
       <Banner
+        isSingleWord
         pre_title="Depoi"
         pos_title="mentos"
         text="Confira os depoimentos de pessoas que recorreram a nós!"
@@ -19,8 +20,7 @@ const Depositions = () => {
           pagination={{ clickable: true }}
           loop={true}
           navigation
-          className='bg-footprints'
-          
+          className="bg-footprints"
         >
           {depositions.map(deposition => (
             <SwiperSlide

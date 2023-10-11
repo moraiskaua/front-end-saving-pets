@@ -4,6 +4,8 @@ import FormInput from '@/components/FormInput';
 import FormTextBox from '@/components/FormTextBox';
 
 const Report = () => {
+
+  
   return (
     <>
       <Banner
@@ -19,7 +21,7 @@ const Report = () => {
           <FormInput placeholder="Informe seu telefone " required />
           <FormInput placeholder="Informe seu CPF " required />
           <FormTextBox placeholder="Descreva o pet" required />
-          <FormTextBox placeholder="Descreva o local" required />
+          <FormTextBox placeholder="Informe a Localização" required />
           <FormButton text="Enviar" />
         </form>
       </section>
