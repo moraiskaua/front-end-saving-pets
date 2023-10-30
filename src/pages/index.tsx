@@ -2,12 +2,13 @@ import Button from '@/components/Button';
 import Banner from '@/components/Banner';
 import { useRouter } from 'next/router';
 import HowReport from '@/components/HowReport';
+import Layout from '@/components/Layout';
 
 const Home = () => {
   const router = useRouter();
 
   return (
-    <>
+    <Layout>
       <Banner
         text='"Ter um animal em sua vida não faz de você uma pessoa melhor, mas
         sim cuidar dele e respeitá-lo como merece!"'
@@ -40,7 +41,7 @@ const Home = () => {
         </div>
       </section>
       <HowReport />
-    </>
+    </Layout>
   );
 };
 

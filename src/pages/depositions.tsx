@@ -3,10 +3,11 @@ import 'swiper/swiper-bundle.css';
 import Banner from '@/components/Banner';
 import CardsDepositions from '@/components/CardsDepositions';
 import depositions from '../components/json/depositions.json';
+import Layout from '@/components/Layout';
 
 const Depositions = () => {
   return (
-    <>
+    <Layout>
       <Banner
         isSingleWord
         pre_title="Depoi"
@@ -32,7 +33,7 @@ const Depositions = () => {
           ))}
         </Swiper>
       </section>
-    </>
+    </Layout>
   );
 };
 

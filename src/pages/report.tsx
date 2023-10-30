@@ -2,12 +2,11 @@ import Banner from '@/components/Banner';
 import FormButton from '@/components/FormButton';
 import FormInput from '@/components/FormInput';
 import FormTextBox from '@/components/FormTextBox';
+import Layout from '@/components/Layout';
 
 const Report = () => {
-
-  
   return (
-    <>
+    <Layout>
       <Banner
         text="Nunca deixe para amanhã o Pet que você pode salvar hoje!"
         pre_title="Denu"
@@ -22,10 +21,10 @@ const Report = () => {
           <FormInput placeholder="Informe seu CPF " required />
           <FormTextBox placeholder="Descreva o pet" required />
           <FormTextBox placeholder="Informe a Localização" required />
-          <FormButton text="Enviar" />
+          <FormButton>Enviar</FormButton>
         </form>
       </section>
-    </>
+    </Layout>
   );
 };
 

@@ -39,7 +39,7 @@ const Register = () => {
               </Link>
             </p>
           </div>
-          <FormButton text="Cadastrar" />
+          <FormButton>Cadastrar</FormButton>
         </form>
       </section>
     </>

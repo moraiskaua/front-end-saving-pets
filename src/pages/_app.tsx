@@ -28,9 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/logo.svg" />
         <title>Saving Pets</title>
       </Head>
-      {!isRegisterPage && <Navbar isScrolled={isScrolled} />}
       <Component {...pageProps} />
-      {!isRegisterPage && <Footer />}
     </>
   );
 }

@@ -2,10 +2,11 @@ import Banner from '@/components/Banner';
 import FormButton from '@/components/FormButton';
 import FormInput from '@/components/FormInput';
 import FormTextBox from '@/components/FormTextBox';
+import Layout from '@/components/Layout';
 
 const Contact = () => {
   return (
-    <>
+    <Layout>
       <Banner
         text="Entre em contato com a equipe do saving-pets"
         pre_title="Cont"
@@ -19,10 +20,10 @@ const Contact = () => {
           <FormInput placeholder="Informe seu telefone " required />
           <FormTextBox placeholder="Nos diga o motivo do contato" />
 
-          <FormButton text="Enviar" />
+          <FormButton>Enviar</FormButton>
         </form>
       </section>
-    </>
+    </Layout>
   );
 };
 

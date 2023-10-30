@@ -1,8 +1,9 @@
 import Banner from '@/components/Banner';
+import Layout from '@/components/Layout';
 
 const PrivacyPolicy = () => {
   return (
-    <>
+    <Layout>
       <Banner
         text="Conheça nossa Política de Privacidade!"
         pre_title="Política de"
@@ -167,7 +168,7 @@ const PrivacyPolicy = () => {
           Última atualização: <strong>3 de setembro de 2023</strong>
         </h6>
       </section>
-    </>
+    </Layout>
   );
 };
 

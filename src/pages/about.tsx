@@ -1,9 +1,10 @@
 import Banner from '@/components/Banner';
 import CardProfile from '@/components/CardsProfile';
+import Layout from '@/components/Layout';
 
 const About = () => {
   return (
-    <>
+    <Layout>
       <Banner
         text="Conheça um pouco da nossa história!"
         pre_title="Sobre"
@@ -25,14 +26,14 @@ const About = () => {
             <CardProfile
               photo="/images/foto_douglas.jpg"
               name="Douglas Santos"
-              role="Full-Stack Developer"
+              role="Full-stack Developer"
               github="https://github.com/D0uglasSantos"
               email="mailto:douglas.santos@sempreceub.com"
             />
             <CardProfile
               photo="/images/foto_kaua.jpg"
               name="Kauã Morais"
-              role="Full-Stack Developer"
+              role="Full-stack Developer"
               github="https://github.com/moraiskaua"
               email="mailto:moraiskaua@sempreceub.com"
             />
@@ -99,7 +100,7 @@ const About = () => {
           </h3>
         </div>
       </section>
-    </>
+    </Layout>
   );
 };
 

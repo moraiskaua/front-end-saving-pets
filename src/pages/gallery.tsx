@@ -1,9 +1,10 @@
 import Banner from '@/components/Banner';
 import CardImages from '@/components/CardsImages';
+import Layout from '@/components/Layout';
 
 const Gallery = () => {
   return (
-    <>
+    <Layout>
       <Banner
         text="Veja um pouco da nossa histórias e momentos na nossa galeria"
         pre_title="Gal"
@@ -18,7 +19,7 @@ const Gallery = () => {
         <CardImages image="/images/gallery/cao-na-chuva.jpg" />
         <CardImages image="/images/gallery/cao-e-gato.jpg" />
       </section>
-    </>
+    </Layout>
   );
 };
 

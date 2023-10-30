@@ -1,14 +1,16 @@
+import { ReactNode } from 'react';
+
 interface FormsButtonProps {
-  text: string;
+  children: ReactNode;
 }
 
-const FormButton = ({ text }: FormsButtonProps) => {
+const FormButton = ({ children }: FormsButtonProps) => {
   return (
     <button
       type="submit"
       className="bg-amber-400 py-1.5 mt-6 rounded-md font-medium transition-all hover:-translate-y-1 hover:bg-[#FEAE11] cursor-pointer"
     >
-      {text}
+      {children}
     </button>
   );
 };

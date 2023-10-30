@@ -26,10 +26,10 @@ const CardProfile = ({ photo, name, role, github, email }: PhotoCardProps) => {
       <h2 className="text-center text-xl font-medium">{name}</h2>
       <h4 className="text-center text-lg font-thin mb-8 text-yellow">{role}</h4>
       <div className="flex justify-center gap-1">
-        <Link href={github} target="_blank">
+        <Link href={github} target="_blank" rel="noopener noreferrer">
           <GitHubIcon className=" text-white/75 border-2 border-white/75 p-1 w-9 h-9 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md" />
         </Link>
-        <Link href={email} target="_blank">
+        <Link href={email} target="_blank" rel="noopener noreferrer">
           <EmailIcon className=" text-white/75 border-2 border-white/75 p-1 w-9 h-9 flex justify-center items-center rounded-full transition-transform hover:-translate-y-1 cursor-pointer hover:shadow-md" />
         </Link>
       </div>
