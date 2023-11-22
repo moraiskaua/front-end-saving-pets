@@ -32,7 +32,7 @@ const Gallery = () => {
         pos_title="eria"
         isSingleWord
       />
-      <section className="min-h-screen flex flex-wrap gap-8 justify-center items-center pt-10 p-11 bg-wallpaper-about-us bg-cover bg-center">
+      <section className="min-h-screen flex flex-wrap gap-8 justify-center items-center p-12 bg-wallpaper-about-us bg-cover bg-center">
         {images.map(image => (
           <CardImages
             key={image.id}
