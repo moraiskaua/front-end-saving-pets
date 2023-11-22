@@ -4,7 +4,7 @@ import FormButton from '@/components/FormButton';
 import FormInput from '@/components/FormInput';
 import FormTextBox from '@/components/FormTextBox';
 import Layout from '@/components/Layout';
-import Modal from '@/components/Modal';
+import ContactModal from '@/components/ContactModal';
 import { parseCookies } from 'nookies';
 import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
@@ -115,7 +115,7 @@ const Contact = () => {
           <FormButton>Enviar</FormButton>
         </form>
       </section>
-      {isModalOpen && <Modal onClose={handleCloseModal} />}
+      {isModalOpen && <ContactModal onClose={handleCloseModal} />}
     </Layout>
   );
 };

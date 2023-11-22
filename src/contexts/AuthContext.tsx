@@ -5,29 +5,29 @@ import { destroyCookie, parseCookies, setCookie } from 'nookies';
 import { ReactNode, createContext, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
-type UserProps = {
+interface UserProps {
   id: string;
   name: string;
   email: string;
   cpf: string;
   phone: string;
   createdAt?: Date;
-};
+}
 
-type SignInProps = {
+interface SignInProps {
   email: string;
   password: string;
-};
+}
 
-type SignUpProps = {
+interface SignUpProps {
   name: string;
   email: string;
   password: string;
   cpf: string;
   phone: string;
-};
+}
 
-type AuthContextProps = {
+interface AuthContextProps {
   user: UserProps;
   isAuthenticated: boolean;
   signUp: (data: SignUpProps) => Promise<void>;
@@ -35,11 +35,12 @@ type AuthContextProps = {
   setUser: (data: UserProps) => void;
   signOut: () => Promise<void>;
   isLoading: boolean;
-};
+}
 
-type AuthProviderProps = {
+interface AuthProviderProps {
   children: ReactNode;
-};
+}
+
 export const AuthContext = createContext({} as AuthContextProps);
 
 export const signOut = async () => {

@@ -1,24 +1,51 @@
+import React, { useState } from 'react';
 import Banner from '@/components/Banner';
 import CardImages from '@/components/CardsImages';
 import Layout from '@/components/Layout';
+import PhotoModal from '@/components/PhotoModal';
+import images from '@/components/json/gallery-images.json';
+
+type ImageProps = {
+  id: string;
+  image: string;
+};
 
 const Gallery = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState({} as ImageProps);
+
+  const handleOpenModal = (image: ImageProps) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+    console.log(selectedImage);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage({} as ImageProps);
+  };
+
   return (
     <Layout>
       <Banner
-        text="Veja um pouco da nossa histórias e momentos na nossa galeria"
+        text="Veja um pouco da nossa história e momentos na nossa galeria"
         pre_title="Gal"
         pos_title="eria"
         isSingleWord
       />
       <section className="min-h-screen flex flex-wrap gap-8 justify-center pt-10 p-11 bg-wallpaper-about-us bg-cover bg-center">
-        <CardImages image="/images/gallery/bulldog.jpg" />
-        <CardImages image="/images/gallery/cao-e-mao.jpg" />
-        <CardImages image="/images/gallery/cao-e-dono.jpg" />
-        <CardImages image="/images/gallery/gatos.jpg" />
-        <CardImages image="/images/gallery/cao-na-chuva.jpg" />
-        <CardImages image="/images/gallery/cao-e-gato.jpg" />
+        {images.map(image => (
+          <CardImages
+            key={image.id}
+            imageUrl={image.image}
+            selectedImage={selectedImage.image}
+            onClick={() => handleOpenModal(image)}
+          />
+        ))}
       </section>
+      {isModalOpen && (
+        <PhotoModal imageUrl={selectedImage.image} onClose={handleCloseModal} />
+      )}
     </Layout>
   );
 };

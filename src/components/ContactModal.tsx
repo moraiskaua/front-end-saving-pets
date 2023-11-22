@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface ModalProps {
+interface ContactModalProps {
   onClose: () => void;
 }
 
-const Modal = ({ onClose }: ModalProps) => {
+const ContactModal = ({ onClose }: ContactModalProps) => {
   return (
     <div
       className="fixed inset-0 z-20 overflow-y-auto bg-black/75"
@@ -37,4 +37,4 @@ const Modal = ({ onClose }: ModalProps) => {
   );
 };
 
-export default Modal;
+export default ContactModal;
