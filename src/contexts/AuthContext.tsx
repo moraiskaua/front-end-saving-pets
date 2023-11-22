@@ -33,6 +33,7 @@ type AuthContextProps = {
   signUp: (data: SignUpProps) => Promise<void>;
   signIn: (data: SignInProps) => Promise<void>;
   signOut: () => Promise<void>;
+  isLoading: boolean;
 };
 
 type AuthProviderProps = {
@@ -48,6 +49,7 @@ export const signOut = async () => {
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<UserProps>();
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const isAuthenticated = !!user;
 
@@ -78,6 +80,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   const signUp = async ({ name, email, password, cpf, phone }: SignUpProps) => {
     try {
+      setIsLoading(true);
       await api.post('/users', {
         name,
         email,
@@ -91,11 +94,15 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     } catch (error: any) {
       const { message } = error.response?.data;
       toast.error(message);
+      router.push('/register');
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const signIn = async ({ email, password }: SignInProps) => {
     try {
+      setIsLoading(true);
       const response = await api.post('/users/login', {
         email,
         password,
@@ -129,17 +136,22 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
           phone,
           createdAt,
         });
-        toast.success(`Seja bem-vindo(a), ${name}!`);
+        toast.success(`Seja bem-vindo(a), ${name}!`, {
+          position: 'bottom-right',
+        });
       });
 
       router.back();
     } catch (error: any) {
       const { message } = error.response?.data;
+      router.push('/login');
       if (error.response.data.statusCode === 500) {
         toast.error('E-mail ou senha incorretos!');
       } else {
         toast.error(message);
       }
+    } finally {
+      setIsLoading(false);
       router.push('/login');
     }
   };
@@ -152,6 +164,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         signUp,
         signIn,
         signOut,
+        isLoading,
       }}
     >
       {children}

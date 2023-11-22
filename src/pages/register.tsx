@@ -1,6 +1,7 @@
 import BackButton from '@/components/BackButton';
 import FormButton from '@/components/FormButton';
 import FormInput from '@/components/FormInput';
+import Loader from '@/components/Loader';
 import { AuthContext } from '@/contexts/AuthContext';
 import { canSSRGuest } from '@/utils/canSSRGuest';
 import { formatCPF, formatPhone } from '@/utils/formaters';
@@ -16,7 +17,7 @@ const Register = () => {
   const [cpf, setCpf] = useState('');
   const [phone, setPhone] = useState('');
   const [privacyPolicy, setPrivacyPolicy] = useState(false);
-  const { signUp } = useContext(AuthContext);
+  const { signUp, isLoading } = useContext(AuthContext);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -108,7 +109,7 @@ const Register = () => {
                 </Link>
               </label>
             </div>
-            <FormButton>Cadastrar</FormButton>
+            <FormButton>{isLoading ? <Loader /> : 'Cadastrar'}</FormButton>
             <p className="text-sm">
               Já possui uma conta?{' '}
               <Link

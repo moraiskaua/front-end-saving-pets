@@ -5,26 +5,24 @@ import { AuthContext } from '@/contexts/AuthContext';
 import { canSSRGuest } from '@/utils/canSSRGuest';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { FormEvent, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
+import Loader from '@/components/Loader';
 
 const Login = () => {
-  const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { signIn } = useContext(AuthContext);
+  const { signIn, isLoading } = useContext(AuthContext);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     if (!email || !password) return toast.error('Preencha todos os campos!');
 
-    signIn({
+    await signIn({
       email,
       password,
     });
-    router.push('/');
   };
 
   return (
@@ -57,7 +55,7 @@ const Login = () => {
               value={password}
               onChange={e => setPassword(e.target.value)}
             />
-            <FormButton>Entrar</FormButton>
+            <FormButton>{isLoading ? <Loader /> : 'Entrar'}</FormButton>
             <p className="text-center text-sm">
               Ainda não possui uma conta?{' '}
               <Link
