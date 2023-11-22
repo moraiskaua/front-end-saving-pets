@@ -7,6 +7,7 @@ import { formatCPF, formatPhone } from '@/utils/formaters';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FormEvent, useContext, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -21,11 +22,11 @@ const Register = () => {
     e.preventDefault();
 
     if (!privacyPolicy) {
-      return alert('Você precisa aceitar a Política de Privacidade!');
+      return toast.warn('Você precisa aceitar a Política de Privacidade!');
     }
 
     if (!name || !email || !password || !cpf || !phone) {
-      return alert('Preencha todos os campos!');
+      return toast.error('Preencha todos os campos!');
     }
 
     await signUp({ name, email, password, cpf, phone });
@@ -56,21 +57,18 @@ const Register = () => {
               type="text"
               value={name}
               onChange={e => setName(e.target.value)}
-              required
             />
             <FormInput
               placeholder="E-mail"
               type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              required
             />
             <FormInput
               placeholder="Senha"
               type="password"
               value={password}
               onChange={e => setPassowrd(e.target.value)}
-              required
             />
             <div className="flex justify-center gap-3 w-full">
               <FormInput
@@ -79,7 +77,6 @@ const Register = () => {
                 value={cpf}
                 onChange={e => setCpf(formatCPF(e.target.value))}
                 maxLength={14}
-                required
               />
               <FormInput
                 placeholder="Celular"
@@ -87,7 +84,6 @@ const Register = () => {
                 value={phone}
                 onChange={e => setPhone(formatPhone(e.target.value))}
                 maxLength={15}
-                required
               />
             </div>
             <div className="w-full flex gap-2 items-center">

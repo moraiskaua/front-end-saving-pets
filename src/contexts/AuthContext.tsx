@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { api } from '@/services/apiClient';
 import { useRouter } from 'next/router';
 import { destroyCookie, parseCookies, setCookie } from 'nookies';
 import { ReactNode, createContext, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 type UserProps = {
   id: string;
@@ -39,11 +41,9 @@ type AuthProviderProps = {
 export const AuthContext = createContext({} as AuthContextProps);
 
 export const signOut = async () => {
-  try {
-    destroyCookie(undefined, '@savingpets-auth.token');
-    destroyCookie(undefined, '@savingpets-auth.userId');
-    window.location.reload();
-  } catch (error) {}
+  destroyCookie(undefined, '@savingpets-auth.token');
+  destroyCookie(undefined, '@savingpets-auth.userId');
+  window.location.reload();
 };
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
@@ -87,7 +87,11 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       });
 
       router.push('/login');
-    } catch (error) {}
+      toast.success('Conta criada com sucesso!');
+    } catch (error: any) {
+      const { message } = error.response?.data;
+      toast.error(message);
+    }
   };
 
   const signIn = async ({ email, password }: SignInProps) => {
@@ -125,10 +129,19 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
           phone,
           createdAt,
         });
+        toast.success(`Seja bem-vindo(a), ${name}!`);
       });
 
       router.back();
-    } catch (error) {}
+    } catch (error: any) {
+      const { message } = error.response?.data;
+      if (error.response.data.statusCode === 500) {
+        toast.error('E-mail ou senha incorretos!');
+      } else {
+        toast.error(message);
+      }
+      router.push('/login');
+    }
   };
 
   return (

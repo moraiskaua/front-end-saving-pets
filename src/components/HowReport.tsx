@@ -16,7 +16,7 @@ const HowReport = () => {
               width={45}
               height={45}
             />
-            <p className="bg-brown p-2 rounded-full font-medium">
+            <p className="bg-brown py-3 px-4 rounded-full font-medium text-sm">
               Acesse a página Denúncias
             </p>
           </div>
@@ -28,7 +28,7 @@ const HowReport = () => {
               width={45}
               height={45}
             />
-            <p className="bg-brown p-2 rounded-full font-medium">
+            <p className="bg-brown py-3 px-4 rounded-full font-medium text-sm">
               Preencha os espaços com o que se pede
             </p>
           </div>
@@ -40,7 +40,7 @@ const HowReport = () => {
               width={45}
               height={45}
             />
-            <p className="bg-brown p-2 rounded-full font-medium">
+            <p className="bg-brown py-3 px-4 rounded-full font-medium text-sm">
               Clique no botão enviar para registrar sua denúncia
             </p>
           </div>
@@ -52,7 +52,7 @@ const HowReport = () => {
               width={45}
               height={45}
             />
-            <p className="bg-brown p-2 rounded-full font-medium">
+            <p className="bg-brown py-3 px-4 rounded-full font-medium text-sm">
               Aguarde a equipe entrar em contato!
             </p>
           </div>
