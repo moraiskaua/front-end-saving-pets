@@ -1,12 +1,29 @@
 import FormButton from '@/components/FormButton';
 import FormInput from '@/components/FormInput';
+import { AuthContext } from '@/contexts/AuthContext';
+import { canSSRGuest } from '@/utils/canSSRGuest';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { FormEvent, useContext, useState } from 'react';
 import { IoArrowBackSharp } from 'react-icons/io5';
 
 const Login = () => {
   const router = useRouter();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { signIn } = useContext(AuthContext);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+
+    if (!email || !password) return alert('Preencha todos os campos!');
+
+    signIn({
+      email,
+      password,
+    });
+    router.push('/');
+  };
 
   return (
     <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-yellow">
@@ -27,17 +44,24 @@ const Login = () => {
         </div>
         <div className="lg:border-l-2 lg:w-1/2 md:w-full sm:w-full">
           <form
-            action=""
+            onSubmit={handleSubmit}
             className="py-12 px-8 rounded-md flex flex-col gap-4 l justify-center"
           >
             <h1 className="text-2xl mb-8 text-center">Login</h1>
-            <FormInput placeholder="Informe o seu CPF" required />
-            <FormInput placeholder="Informe a sua senha" required />
-
-            <div className="flex gap-2 mb-2">
-              <input type="checkbox" className="" />
-              <p className="text-sm">Me manter conectado</p>
-            </div>
+            <FormInput
+              placeholder="Digite seu e-mail"
+              type="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
+            <FormInput
+              placeholder="Digite sua senha"
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              required
+            />
             <FormButton>Enviar</FormButton>
           </form>
         </div>
@@ -45,5 +69,11 @@ const Login = () => {
     </section>
   );
 };
+
+export const getServerSideProps = canSSRGuest(async ctx => {
+  return {
+    props: {},
+  };
+});
 
 export default Login;

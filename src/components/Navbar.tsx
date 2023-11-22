@@ -1,6 +1,8 @@
+import { AuthContext } from '@/contexts/AuthContext';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useContext } from 'react';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -8,6 +10,7 @@ interface NavbarProps {
 
 const Navbar = ({ isScrolled }: NavbarProps) => {
   const pathname = usePathname();
+  const { isAuthenticated, signOut } = useContext(AuthContext);
 
   return (
     <header
@@ -74,17 +77,27 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Denunciar
           </li>
         </Link>
-        <Link href="/register">
+        {isAuthenticated ? (
           <li
-            className={`link ${
-              pathname === '/register'
-                ? 'text-yellow border-b-2 border-yellow'
-                : 'text-gray-300 hover:text-white transition-transform hover:scale-110 font-hind-siliguri'
-            }`}
+            className={`cursor-pointer text-gray-300 hover:text-white transition-transform hover:scale-110 font-hind-siliguri
+            `}
+            onClick={() => signOut()}
           >
-            Cadastro
+            Sair
           </li>
-        </Link>
+        ) : (
+          <Link href="/login">
+            <li
+              className={`link ${
+                pathname === '/register'
+                  ? 'text-yellow border-b-2 border-yellow'
+                  : 'text-gray-300 hover:text-white transition-transform hover:scale-110 font-hind-siliguri'
+              }`}
+            >
+              Entrar
+            </li>
+          </Link>
+        )}
       </ul>
     </header>
   );
