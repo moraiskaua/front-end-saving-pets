@@ -7,38 +7,81 @@ import Layout from '@/components/Layout';
 import Modal from '@/components/Modal';
 import { parseCookies } from 'nookies';
 import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
+import { AuthContext } from '@/contexts/AuthContext';
+import { api } from '@/services/apiClient';
 
 const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { user, setUser } = useContext(AuthContext);
   const [reason, setReason] = useState('');
   const [msg, setMsg] = useState('');
 
   useEffect(() => {
-    const cookies = parseCookies(undefined);
+    const { '@savingpets-auth.token': token } = parseCookies();
 
-    if (!cookies['@savingpets-auth.token']) {
-      setIsModalOpen(true);
+    if (!token) {
+      return setIsModalOpen(true);
     }
+
+    const { '@savingpets-auth.userId': userId } = parseCookies();
+
+    api.get(`/users/${userId}`).then(response => {
+      const { id, name, email, cpf, phone, createdAt } = response.data.data;
+
+      setUser({
+        id,
+        name,
+        email,
+        cpf,
+        phone,
+        createdAt,
+      });
+    });
   }, []);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    const { '@savingpets-auth.token': token } = parseCookies();
 
-    const cookies = parseCookies(undefined);
-
-    if (!cookies['@savingpets-auth.token']) {
+    if (!token) {
       return toast.warn('Você precisa estar logado para enviar uma mensagem!', {
         position: 'bottom-right',
       });
     }
 
-    toast.success('Mensagem enviada com sucesso!', {
-      position: 'bottom-right',
-    });
+    const { name, email, phone } = user;
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+        {
+          to_name: 'Equipe Saving-Pets',
+          from_name: name,
+          from_email: email,
+          from_phone: phone,
+          reason,
+          msg,
+        },
+        process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      );
+
+      toast.success('Mensagem enviada com sucesso!', {
+        position: 'bottom-right',
+      });
+    } catch {
+      toast.error('Algo de errado, tente novamente mais tarde.', {
+        position: 'bottom-right',
+      });
+    } finally {
+      setReason('');
+      setMsg('');
+    }
   };
 
   return (
@@ -56,13 +99,17 @@ const Contact = () => {
         >
           <h1 className="text-2xl mb-6 text-center">Formulário de contato</h1>
           <FormInput
-            placeholder="Informe o motivo do contato"
+            placeholder="Motivo do contato"
             type="text"
+            value={reason}
+            onChange={e => setReason(e.target.value)}
             required
           />
           <FormTextBox
-            placeholder="Escreva sua mensagem"
+            placeholder="Mensagem"
             type="text"
+            value={msg}
+            onChange={e => setMsg(e.target.value)}
             required
           />
           <FormButton>Enviar</FormButton>

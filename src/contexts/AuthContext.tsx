@@ -32,6 +32,7 @@ type AuthContextProps = {
   isAuthenticated: boolean;
   signUp: (data: SignUpProps) => Promise<void>;
   signIn: (data: SignInProps) => Promise<void>;
+  setUser: (data: UserProps) => void;
   signOut: () => Promise<void>;
   isLoading: boolean;
 };
@@ -164,6 +165,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         signUp,
         signIn,
         signOut,
+        setUser,
         isLoading,
       }}
     >
