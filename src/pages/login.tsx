@@ -19,10 +19,6 @@ const Login = () => {
 
     if (!email || !password) return toast.error('Preencha todos os campos!');
 
-    if (password.length >= 8) {
-      toast.warn('Sua senha deve conter pelo menos 8 caracteres');
-    }
-
     await signIn({
       email,
       password,
@@ -48,16 +44,19 @@ const Login = () => {
           >
             <h1 className="text-2xl mb-8 text-center font-bold">Login</h1>
             <FormInput
-              placeholder="Digite seu e-mail"
+              placeholder="E-mail"
               type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
+              maxLength={100}
             />
             <FormInput
-              placeholder="Digite sua senha"
+              placeholder="Senha"
               type="password"
               value={password}
               onChange={e => setPassword(e.target.value)}
+              onPaste={e => e.preventDefault()}
+              maxLength={30}
             />
             <FormButton>{isLoading ? <Loader /> : 'Entrar'}</FormButton>
             <p className="text-center text-sm">
