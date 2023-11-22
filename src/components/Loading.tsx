@@ -1,4 +1,4 @@
-export default function Loader() {
+export default function Loading() {
   return (
     <svg
       version="1.1"

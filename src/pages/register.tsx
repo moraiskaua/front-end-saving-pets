@@ -4,7 +4,7 @@ import Link from 'next/link';
 import BackButton from '@/components/BackButton';
 import FormButton from '@/components/FormButton';
 import FormInput from '@/components/FormInput';
-import Loader from '@/components/Loading';
+import Loading from '@/components/Loading';
 import { canSSRGuest } from '@/utils/canSSRGuest';
 import { formatCPF, formatPhone } from '@/utils/formaters';
 import { AuthContext } from '@/contexts/AuthContext';
@@ -134,7 +134,7 @@ const Register = () => {
               </Link>
             </label>
           </div>
-          <FormButton>{isLoading ? <Loader /> : 'Cadastrar'}</FormButton>
+          <FormButton>{isLoading ? <Loading /> : 'Cadastrar'}</FormButton>
           <p className="text-sm">
             Já possui uma conta?{' '}
             <Link href="/login" className="text-yellow italic hover:underline">

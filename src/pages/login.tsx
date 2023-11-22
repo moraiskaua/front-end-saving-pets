@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FormEvent, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
-import Loader from '@/components/Loading';
+import Loading from '@/components/Loading';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -58,7 +58,7 @@ const Login = () => {
               onPaste={e => e.preventDefault()}
               maxLength={30}
             />
-            <FormButton>{isLoading ? <Loader /> : 'Entrar'}</FormButton>
+            <FormButton>{isLoading ? <Loading /> : 'Entrar'}</FormButton>
             <p className="text-center text-sm">
               Ainda não possui uma conta?{' '}
               <Link
