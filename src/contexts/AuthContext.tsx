@@ -1,5 +1,5 @@
 import { api } from '@/services/apiClient';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { destroyCookie, parseCookies, setCookie } from 'nookies';
 import { ReactNode, createContext, useEffect, useState } from 'react';
 
@@ -127,7 +127,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         });
       });
 
-      router.push('/about');
+      router.back();
     } catch (error) {}
   };
 
