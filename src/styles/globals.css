@@ -11,3 +11,15 @@
   text-decoration: none;
   list-style: none;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #E7B32E;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #E7B32E !important;
+  /* Altere para a cor desejada */
+  border: 1px solid #E7B32E !important;
+  /* Adicione uma borda se desejar */
+}

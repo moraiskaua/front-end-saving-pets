@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
 import Banner from '@/components/Banner';
 import CardsDepositions from '@/components/CardsDepositions';
 import depositions from '../components/json/depositions.json';
@@ -14,18 +13,19 @@ const Depositions = () => {
         pos_title="mentos"
         text="Confira os depoimentos de pessoas que recorreram a nós!"
       />
-      <section className="min-h-screen py-8 px-12 bg-brown flex items-center">
+      <section className="min-h-screen bg-brown flex items-center bg-wallpaper-about-us bg-cover bg-center">
         <Swiper
-          spaceBetween={2}
-          slidesPerView={2}
+          className=""
           pagination={{ clickable: true }}
-          loop={true}
+          slidesPerView={2}
+          spaceBetween={60}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           navigation
-          className="bg-footprints"
+          loop
         >
           {depositions.map(deposition => (
             <SwiperSlide
-              className="flex items-center justify-center p-20"
+              className="flex items-center justify-center p-16"
               key={deposition.id}
             >
               <CardsDepositions deposition={deposition} />

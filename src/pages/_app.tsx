@@ -1,9 +1,15 @@
-import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { ToastContainer } from 'react-toastify';
+import { register } from 'swiper/element-bundle';
 import 'react-toastify/dist/ReactToastify.css';
+import 'swiper/swiper-bundle.css';
+import '@/styles/globals.css';
+import 'swiper/css/pagination';
+import 'swiper/css';
+
+register();
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

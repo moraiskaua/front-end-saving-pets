@@ -5,13 +5,11 @@ import FormInput from '@/components/FormInput';
 import FormTextBox from '@/components/FormTextBox';
 import Layout from '@/components/Layout';
 import Modal from '@/components/Modal';
-import { AuthContext } from '@/contexts/AuthContext';
 import { parseCookies } from 'nookies';
 import { toast } from 'react-toastify';
 
 const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { user } = useContext(AuthContext);
   const [reason, setReason] = useState('');
   const [msg, setMsg] = useState('');
 

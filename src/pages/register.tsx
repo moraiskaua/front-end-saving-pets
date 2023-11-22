@@ -147,7 +147,7 @@ const Register = () => {
   );
 };
 
-export const getServerSideProps = canSSRGuest(async ctx => {
+export const getServerSideProps = canSSRGuest(async () => {
   return {
     props: {},
   };

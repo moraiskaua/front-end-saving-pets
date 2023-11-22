@@ -11,9 +11,9 @@ interface CardProps {
 
 const CardsDepositions = ({ deposition }: CardProps) => {
   return (
-    <section className="flex flex-col items-center  rounded-3xl bg-white shadow-xl">
+    <div className="flex flex-col items-center min-h-[18rem] h-max rounded-3xl bg-white">
       <Image
-        className="rounded-full border-8 border-yellow -mt-12 mb-2 shadow-lg"
+        className="rounded-full border-8 border-yellow -mt-12 mb-2 object-cover"
         src={deposition.photo}
         alt={`foto de ${deposition.name}`}
         width={150}
@@ -25,7 +25,7 @@ const CardsDepositions = ({ deposition }: CardProps) => {
       <blockquote className="px-8 py-3 text-center text-sm">
         {deposition.deposition}
       </blockquote>
-    </section>
+    </div>
   );
 };
 
