@@ -44,17 +44,6 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Sobre Nós
           </li>
         </Link>
-        <Link href="/contact">
-          <li
-            className={`link ${
-              pathname === '/contact'
-                ? 'text-yellow border-b-2 border-yellow'
-                : 'text-gray-300 hover:text-white transition-transform hover:scale-110 font-hind-siliguri'
-            }`}
-          >
-            Contato
-          </li>
-        </Link>
         <Link href="/gallery">
           <li
             className={`link ${
@@ -66,17 +55,18 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Galeria
           </li>
         </Link>
-        <Link href="/report">
+        <Link href="/contact">
           <li
             className={`link ${
-              pathname === '/report'
+              pathname === '/contact'
                 ? 'text-yellow border-b-2 border-yellow'
                 : 'text-gray-300 hover:text-white transition-transform hover:scale-110 font-hind-siliguri'
             }`}
           >
-            Denunciar
+            Contato
           </li>
         </Link>
+
         {isAuthenticated ? (
           <li
             className={`cursor-pointer text-gray-300 hover:text-white transition-transform hover:scale-110 font-hind-siliguri

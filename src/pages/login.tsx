@@ -1,11 +1,12 @@
+import BackButton from '@/components/BackButton';
 import FormButton from '@/components/FormButton';
 import FormInput from '@/components/FormInput';
 import { AuthContext } from '@/contexts/AuthContext';
 import { canSSRGuest } from '@/utils/canSSRGuest';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FormEvent, useContext, useState } from 'react';
-import { IoArrowBackSharp } from 'react-icons/io5';
 
 const Login = () => {
   const router = useRouter();
@@ -27,12 +28,7 @@ const Login = () => {
 
   return (
     <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-yellow">
-      <button
-        onClick={() => router.back()}
-        className="text-white text-xl py-1 px-2 bg-transparent border-2 border-white rounded-md shadow-lg flex items-center hover:text-black hover:bg-white transition-all absolute left-5 top-5"
-      >
-        <IoArrowBackSharp />
-      </button>
+      <BackButton />
       <section className="flex justify-around items-center gap-4 bg-white shadow-lg p-4 rounded-lg w-3/5">
         <div className="hidden lg:block">
           <Image
@@ -45,9 +41,9 @@ const Login = () => {
         <div className="lg:border-l-2 lg:w-1/2 md:w-full sm:w-full">
           <form
             onSubmit={handleSubmit}
-            className="py-12 px-8 rounded-md flex flex-col gap-4 l justify-center"
+            className="py-12 px-8 rounded-md flex flex-col gap-4 justify-center"
           >
-            <h1 className="text-2xl mb-8 text-center">Login</h1>
+            <h1 className="text-2xl mb-8 text-center font-bold">Login</h1>
             <FormInput
               placeholder="Digite seu e-mail"
               type="email"
@@ -62,7 +58,16 @@ const Login = () => {
               onChange={e => setPassword(e.target.value)}
               required
             />
-            <FormButton>Enviar</FormButton>
+            <FormButton>Entrar</FormButton>
+            <p className="text-center text-sm">
+              Ainda não possui uma conta?{' '}
+              <Link
+                href="/register"
+                className="text-yellow italic hover:underline"
+              >
+                Criar uma
+              </Link>
+            </p>
           </form>
         </div>
       </section>
