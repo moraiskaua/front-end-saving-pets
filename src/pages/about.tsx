@@ -59,10 +59,10 @@ const About = () => {
           </h1>
           <p>
             Somos apaixonados por animais e comprometidos com a missão de tornar
-            o mundo um lugar mais seguro e amoroso para todos os seres vivos de
-            quatro patas. O Saving Pets nasceu da convicção de que todos os pets
-            merecem amor, respeito e cuidado, e é nosso objetivo transformar
-            essa visão em realidade.
+            o mundo um lugar mais seguro e amoroso para todos os seres vivos. O
+            Saving Pets nasceu da convicção de que todos os pets merecem amor,
+            respeito e cuidado, e é nosso objetivo transformar essa visão em
+            realidade.
           </p>
           <p>
             Nossa história começou com um grupo de amantes de animais que,

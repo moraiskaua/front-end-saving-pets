@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FormEvent, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
-import Loader from '@/components/Loader';
+import Loader from '@/components/Loading';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -18,6 +18,10 @@ const Login = () => {
     e.preventDefault();
 
     if (!email || !password) return toast.error('Preencha todos os campos!');
+
+    if (password.length >= 8) {
+      toast.warn('Sua senha deve conter pelo menos 8 caracteres');
+    }
 
     await signIn({
       email,
