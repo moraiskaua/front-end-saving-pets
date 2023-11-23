@@ -93,9 +93,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
       router.push('/login');
       toast.success('Conta criada com sucesso!');
-    } catch (error: any) {
-      const { message } = error.response?.data;
-      toast.error(message);
+    } catch (error) {
+      const errorMessage = error.response?.data?.message || 'Algo deu errado!';
+      toast.error(errorMessage);
       router.push('/register');
     } finally {
       setIsLoading(false);
@@ -144,17 +144,12 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       });
 
       router.back();
-    } catch (error: any) {
-      const { message } = error.response?.data;
+    } catch (error) {
+      const errorMessage = error.response?.data?.message || 'Algo deu errado!';
+      toast.error(errorMessage);
       router.push('/login');
-      if (error.response.data.statusCode === 500) {
-        toast.error('E-mail ou senha incorretos!');
-      } else {
-        toast.error(message);
-      }
     } finally {
       setIsLoading(false);
-      router.push('/login');
     }
   };
 

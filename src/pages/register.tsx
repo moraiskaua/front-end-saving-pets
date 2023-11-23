@@ -35,8 +35,8 @@ const Register = () => {
       return toast.warn('Preencha todos os campos!');
     }
 
-    if (password.length >= 8) {
-      toast.warn('Sua senha deve conter pelo menos 8 caracteres');
+    if (password.length < 8) {
+      return toast.warn('Sua senha deve conter pelo menos 8 caracteres');
     }
 
     if (!isValidCPF(cpf)) {
