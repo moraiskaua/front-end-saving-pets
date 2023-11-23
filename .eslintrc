@@ -19,7 +19,7 @@
   ],
   "plugins": ["@typescript-eslint", "react", "jsx-a11y"],
   "rules": {
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "unix"],
     "no-console": "warn",
     "indent": ["error", 2],
     "quotes": ["error", "single"],
