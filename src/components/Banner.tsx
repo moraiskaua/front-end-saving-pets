@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 interface BannerProps {
   isSingleWord?: boolean;
   pre_title: string;
@@ -9,7 +12,7 @@ const Banner = ({ pre_title, pos_title, text, isSingleWord }: BannerProps) => {
   return (
     <section
       className="min-h-screen w-full flex flex-col justify-center items-center gap-12
-        bg-contain bg-center bg-no-repeat bg-wallpaper bg-[#9D8B81]"
+        bg-contain bg-center bg-no-repeat bg-wallpaper bg-[#9D8B81] relative"
       id="banner"
     >
       <div
@@ -29,6 +32,14 @@ const Banner = ({ pre_title, pos_title, text, isSingleWord }: BannerProps) => {
       <p className="font-hind-siliguri font-light text-lg text-white text-center w-1/3">
         {text}
       </p>
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, 12, 0] }}
+        transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
+        style={{ position: 'absolute', bottom: '85px' }}
+      >
+        <ExpandMoreIcon style={{ fontSize: 80, color: 'white' }} />
+      </motion.div>
     </section>
   );
 };
