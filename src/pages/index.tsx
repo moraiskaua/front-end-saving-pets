@@ -19,7 +19,7 @@ const Home = () => {
         className="min-h-screen bg-wallpaper-about-us bg-cover bg-center text-center flex flex-col justify-center items-center text-white font-hind-siliguri"
         id="about-us"
       >
-        <div className="w-1/2">
+        <div className="w-2/3 md:w-1/2">
           <h2 className="font-medium text-4xl mb-8">Sobre Nós</h2>
           <p className="mb-8 font-light">
             Você certamente já viu um pet andando pela rua sozinho ou em alguma

@@ -18,7 +18,7 @@ const Banner = ({ pre_title, pos_title, text, isSingleWord }: BannerProps) => {
       <div
         className={`${
           isSingleWord ? '' : 'gap-x-2.5'
-        } flex justify-center items-center py-7 border-y-4 text-7xl border-white text-white font-bold uppercase`}
+        } flex justify-center items-center py-7 border-y-4 text-4xl md:text-7xl border-white text-white font-bold uppercase`}
       >
         <p className="z-[1]">{pre_title}</p>
         <h1
@@ -29,7 +29,7 @@ const Banner = ({ pre_title, pos_title, text, isSingleWord }: BannerProps) => {
           {pos_title}
         </h1>
       </div>
-      <p className="font-hind-siliguri font-light text-lg text-white text-center w-1/3">
+      <p className="font-hind-siliguri font-light text-base md:text-lg text-white text-center w-2/3 md:w-1/3">
         {text}
       </p>
       <motion.div

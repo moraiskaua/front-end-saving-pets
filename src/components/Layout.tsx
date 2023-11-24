@@ -1,6 +1,8 @@
 import { useState, useEffect, ReactNode } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { useMediaQuery } from '@mui/material';
+import MobileNavbar from './MobileNavbar';
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,6 +10,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   useEffect(() => {
     const handleScroll = () =>
@@ -20,7 +23,11 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <Navbar isScrolled={isScrolled} />
+      {isMobile ? (
+        <MobileNavbar isScrolled={isScrolled} />
+      ) : (
+        <Navbar isScrolled={isScrolled} />
+      )}
       {children}
       <Footer />
     </>
