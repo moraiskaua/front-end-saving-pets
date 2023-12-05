@@ -53,7 +53,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-4 p-8 w-1/2">
+        <div className="flex flex-col gap-4 p-8 md:w-1/2">
           <h1 className="font-medium text-3xl my-7">
             Bem vindo aos Saving Pets
           </h1>
