@@ -55,7 +55,7 @@ const Register = () => {
   };
 
   return (
-    <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-report-forms bg-yellow">
+    <section className="min-h-screen flex justify-center items-center p-3.5 md:p-0 bg-bottom bg-no-repeat shadow-xl bg-report-forms bg-yellow">
       <BackButton />
       <form
         onSubmit={handleSubmit}

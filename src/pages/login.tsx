@@ -28,7 +28,7 @@ const Login = () => {
   return (
     <section className="min-h-screen flex justify-center items-center bg-bottom bg-no-repeat shadow-xl bg-yellow">
       <BackButton />
-      <section className="flex justify-around items-center gap-4 bg-white shadow-lg p-4 rounded-lg w-3/5">
+      <div className="flex justify-around items-center gap-4 bg-white shadow-lg p-4 rounded-lg md:w-3/5">
         <div className="hidden lg:block">
           <Image
             src="/images/image1-forms-login.png"
@@ -37,10 +37,10 @@ const Login = () => {
             height={500}
           />
         </div>
-        <div className="lg:border-l-2 lg:w-1/2 md:w-full sm:w-full">
+        <div className="w-full lg:border-l-2 md:w-1/2">
           <form
             onSubmit={handleSubmit}
-            className="py-12 px-8 rounded-md flex flex-col gap-4 justify-center"
+            className="py-12 px-7 md:px-0 lg:px-8 rounded-md flex flex-col gap-4 justify-center w-full"
           >
             <h1 className="text-2xl mb-8 text-center font-bold">Login</h1>
             <FormInput
@@ -70,7 +70,7 @@ const Login = () => {
             </p>
           </form>
         </div>
-      </section>
+      </div>
     </section>
   );
 };
