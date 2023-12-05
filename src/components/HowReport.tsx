@@ -6,8 +6,8 @@ const HowReport = () => {
       <h2 className="-m-4 text-4xl font-semibold">
         Como <span className="p-1 bg-brown text-yellow">Denunciar?</span>
       </h2>
-      <div className="bg-footprints bg-contain bg-repeat-x p-1">
-        <div className="flex justify-between items-center gap-8 w-full p-16">
+      <div className="py-16 md:bg-footprints bg-contain bg-repeat-x md:p-1">
+        <div className="flex flex-col gap-7 md:flex-row md:justify-between md:items-center md:gap-8 w-full md:p-16">
           <div className="text-center flex flex-col justify-center items-center gap-2">
             <Image
               className="animate-bounce"
@@ -44,7 +44,7 @@ const HowReport = () => {
               Clique no botão enviar para registrar sua denúncia
             </p>
           </div>
-          <div className="text-center flex flex-col ju  stify-center items-center gap-2">
+          <div className="text-center flex flex-col justify-center items-center gap-2">
             <Image
               className="animate-bounce"
               src="/images/icons/4.svg"

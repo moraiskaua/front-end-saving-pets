@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-brown shadow-2xl flex-wrap text-white/75 p-5">
-      <div className="flex justify-around items-center border-b border-b-white/75 p-3">
+      <div className="flex flex-col md:flex-row justify-around items-center border-b border-b-white/75 p-3 gap-7">
         <div className="mb-3">
           <Image
             src="/logo.svg"
