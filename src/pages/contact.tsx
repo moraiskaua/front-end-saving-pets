@@ -92,9 +92,9 @@ const Contact = () => {
         pos_title="ato"
         isSingleWord
       />
-      <section className="min-h-screen bg-contact-forms flex items-center justify-start bg-yellow bg-no-repeat bg-right-bottom">
+      <section className="min-h-screen bg-contact-forms flex items-center justify-start  p-2.5 md:p-0 bg-yellow bg-no-repeat bg-right-bottom">
         <form
-          className="bg-white shadow-lg py-12 px-8 w-4/12 ml-32 rounded-md flex flex-col gap-4"
+          className="bg-white shadow-lg py-12 px-8 w-full md:w-4/12 md:ml-32 rounded-md flex flex-col gap-4"
           onSubmit={handleSubmit}
         >
           <h1 className="text-2xl mb-6 text-center">Formulário de contato</h1>
