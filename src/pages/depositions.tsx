@@ -3,8 +3,11 @@ import Banner from '@/components/Banner';
 import CardsDepositions from '@/components/CardsDepositions';
 import depositions from '../components/json/depositions.json';
 import Layout from '@/components/Layout';
+import { useMediaQuery } from '@mui/material';
 
 const Depositions = () => {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
   return (
     <Layout>
       <Banner
@@ -15,17 +18,16 @@ const Depositions = () => {
       />
       <section className="min-h-screen bg-brown flex items-center bg-wallpaper-about-us bg-cover bg-center">
         <Swiper
-          className=""
           pagination={{ clickable: true }}
-          slidesPerView={2}
-          spaceBetween={60}
+          slidesPerView={isMobile ? 1 : 2}
+          spaceBetween={15}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           navigation
           loop
         >
           {depositions.map(deposition => (
             <SwiperSlide
-              className="flex items-center justify-center p-16"
+              className="flex items-center justify-center py-16 px-10 md:px-5"
               key={deposition.id}
             >
               <CardsDepositions deposition={deposition} />

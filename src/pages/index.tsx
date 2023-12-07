@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <Layout>
       <Banner
-        text='"Ter um animal em sua vida não faz de você uma pessoa melhor, mas
-        sim cuidar dele e respeitá-lo como merece!"'
+        text={`"Ter um animal em sua vida não faz de você uma pessoa melhor, mas
+        sim cuidar dele e respeitá-lo como merece!"`}
         pre_title="Saving"
         pos_title="Pets"
       />
