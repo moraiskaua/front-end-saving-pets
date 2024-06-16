@@ -17,7 +17,7 @@ const HowReport = () => {
               height={45}
             />
             <p className="bg-brown py-3 px-4 rounded-full font-medium text-sm">
-              Acesse a página Denúncias
+              Clique no ícone de "+" localizado no canto inferior direito
             </p>
           </div>
           <div className="text-center flex flex-col justify-center items-center gap-2">
@@ -41,7 +41,7 @@ const HowReport = () => {
               height={45}
             />
             <p className="bg-brown py-3 px-4 rounded-full font-medium text-sm">
-              Clique no botão enviar para registrar sua denúncia
+              Clique no botão salvar para registrar sua denúncia
             </p>
           </div>
           <div className="text-center flex flex-col justify-center items-center gap-2">

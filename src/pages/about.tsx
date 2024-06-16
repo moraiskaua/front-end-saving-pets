@@ -17,6 +17,13 @@ const About = () => {
           </h1>
           <div className="flex flex-wrap justify-around gap-2">
             <CardProfile
+              photo="/images/foto_guilherme.jpg"
+              name="Guilherme Marques"
+              role="Requirements Analyst"
+              github=""
+              email="mailto:guilherme.marques@sempreceub.com"
+            />
+            <CardProfile
               photo="/images/foto_davi.jpg"
               name="Davi Salomão"
               role="UI-UX"
@@ -36,13 +43,6 @@ const About = () => {
               role="Full-stack Developer"
               github="https://github.com/moraiskaua"
               email="mailto:moraiskaua@sempreceub.com"
-            />
-            <CardProfile
-              photo="/images/foto_guilherme.jpg"
-              name="Guilherme Marques"
-              role="Data Base Manager"
-              github=""
-              email="mailto:guilherme.marques@sempreceub.com"
             />
             <CardProfile
               photo="/images/foto_larissa.jpg"
