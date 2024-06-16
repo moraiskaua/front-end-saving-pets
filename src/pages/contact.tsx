@@ -38,7 +38,7 @@ const Contact = () => {
         createdAt,
       });
     });
-  }, []);
+  }, [setUser]);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
