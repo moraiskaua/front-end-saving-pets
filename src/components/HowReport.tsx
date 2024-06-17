@@ -17,7 +17,8 @@ const HowReport = () => {
               height={45}
             />
             <p className="bg-brown py-3 px-4 rounded-full font-medium text-sm">
-              Clique no ícone de "+" localizado no canto inferior direito
+              Clique no ícone de &quot;+&quot; localizado no canto inferior
+              direito
             </p>
           </div>
           <div className="text-center flex flex-col justify-center items-center gap-2">
